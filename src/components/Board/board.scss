@@ -1,0 +1,5 @@
+.board-container {
+  background-image: linear-gradient(to right bottom, rgb(50, 99, 103), rgb(0, 0, 0)),
+    linear-gradient(transparent, rgb(0, 0, 0) 70%);
+  grid-area: board;
+}

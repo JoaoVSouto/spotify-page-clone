@@ -1,0 +1,9 @@
+.App {
+  height: 100%;
+  display: grid;
+  grid-template-columns: 230px 1fr;
+  grid-template-rows: 1fr 90px;
+  grid-template-areas:
+    'nav board'
+    'player player';
+}
