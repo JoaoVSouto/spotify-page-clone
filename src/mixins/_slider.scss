@@ -1,0 +1,32 @@
+@mixin slider() {
+
+  &:hover,
+  &:active {
+    .rc-slider-track {
+      background-color: #49ba55;
+    }
+
+    .rc-slider-handle {
+      opacity: 1;
+    }
+  }
+
+  &-rail {
+    background-color: #404040;
+  }
+
+  &-track {
+    background-color: #b3b3b3;
+  }
+
+  &-handle {
+    border: none;
+    cursor: unset;
+    opacity: 0;
+
+    &:active {
+      cursor: inherit;
+      box-shadow: none;
+    }
+  }
+}

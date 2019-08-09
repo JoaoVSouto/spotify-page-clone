@@ -1,0 +1,19 @@
+@mixin button($scale, $marginlr) {
+  background-color: transparent;
+  border: none;
+  color: inherit;
+  margin: 0 $marginlr;
+  transform: scale($scale);
+
+  &:hover {
+    color: white;
+  }
+
+  &:active {
+    color: inherit;
+  }
+
+  svg {
+    vertical-align: middle;
+  }
+}
