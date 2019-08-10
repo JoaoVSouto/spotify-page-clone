@@ -8,7 +8,8 @@
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-icons": "^3.7.0",
-    "react-scripts": "3.0.1"
+    "react-scripts": "3.0.1",
+    "react-scrollbars-custom": "^4.0.16"
   },
   "scripts": {
     "start": "react-scripts start",
