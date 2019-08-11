@@ -1,4 +1,4 @@
-// TODO: Refactor nav-container to flexbox
+@import '../../mixins/scrollbar';
 
 .nav-container {
   background-color: rgba($color: #060d0d, $alpha: 0.95);
@@ -146,25 +146,7 @@
       }
 
       .ScrollbarsCustom {
-        height: 100% !important;
-
-        &-Wrapper {
-          width: 100%;
-          height: 100%;
-          position: relative;
-        }
-
-        &-Track {
-          position: absolute;
-          width: 16px;
-          height: 100%;
-          background-color: transparent;
-          right: -6px;
-        }
-
-        &-Thumb {
-          background-color: #515555;
-        }
+        @include scrollbar(16px);
       }
     }
   }
@@ -203,6 +185,7 @@
       align-items: center;
       border-top: 1px solid #404040;
       padding-top: 8px;
+      cursor: pointer;
 
       &__img {
         width: 28px;
