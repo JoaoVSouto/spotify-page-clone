@@ -1,0 +1,21 @@
+@mixin scrollbar($width) {
+  height: 100% !important;
+
+  &-Wrapper {
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+
+  &-Track {
+    position: absolute;
+    width: $width;
+    height: 100%;
+    background-color: transparent;
+    right: -6px;
+  }
+
+  &-Thumb {
+    background-color: #515555;
+  }
+}
