@@ -1,4 +1,4 @@
-@mixin scrollbar($width) {
+@mixin scrollbar($width, $color) {
   height: 100% !important;
 
   &-Wrapper {
@@ -16,6 +16,6 @@
   }
 
   &-Thumb {
-    background-color: #515555;
+    background-color: $color;
   }
 }

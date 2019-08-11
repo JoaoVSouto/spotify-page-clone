@@ -146,7 +146,7 @@
       }
 
       .ScrollbarsCustom {
-        @include scrollbar(16px);
+        @include scrollbar(16px, #515555);
       }
     }
   }
