@@ -1,3 +1,145 @@
+@import '../../mixins/scrollbar';
+
+.ScrollbarsCustom {
+  @include scrollbar(22px, #5f6b6d);
+}
+
 .board-container {
   grid-area: board;
+  padding: 0 32px;
+
+  &__nav {
+    padding: 20px 0;
+    text-align: center;
+
+    li {
+      display: inline-block;
+      text-transform: uppercase;
+      font-size: 11px;
+      color: #b2b2b2;
+      font-weight: bold;
+      letter-spacing: 2px;
+      margin: 10px;
+      padding: 5px 10px;
+      cursor: pointer;
+      transition: color .3s ease;
+
+      &:first-child {
+        color: white;
+
+        &::after {
+          content: '';
+          margin: 0 auto;
+          display: block;
+          width: 35%;
+          border: 1px solid #49ba55;
+          margin-top: 3px;
+        }
+      }
+
+      &:hover {
+        color: white;
+      }
+    }
+  }
+
+  &__section {
+    padding-right: 22px;
+
+    h1 {
+      font-size: 36px;
+      color: white;
+      margin: 24px 0;
+    }
+
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      grid-gap: 35px 16px;
+      padding-bottom: 35px;
+
+      &__card {
+        display: flex;
+        flex-direction: column;
+
+        &:hover {
+          .overlay {
+            opacity: 1 !important;
+          }
+        }
+
+        .img-container {
+          flex-basis: 162px;
+          cursor: pointer;
+
+          &:active {
+            transform: scale(0.95);
+            box-shadow: none;
+          }
+
+          .rounded {
+            border-radius: 50%;
+
+            .overlay {
+              border-radius: 50%;
+            }
+          }
+
+          .img {
+            box-shadow: 0 0 10px rgba($color: #000, $alpha: 0.3);
+            width: 100%;
+            height: 162px;
+            background-size: cover !important;
+            background-position: 50%;
+
+            .overlay {
+              position: relative;
+              width: 100%;
+              height: 100%;
+              opacity: 0;
+              background-color: rgba($color: #000, $alpha: 0.6);
+              transition-property: opacity;
+              transition-duration: .1s;
+              transition-timing-function: cubic-bezier(.3, 0, 0, 1);
+
+              svg {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                color: white;
+                transform: translate(-50%, -50%);
+                width: 70px;
+                height: 70px;
+                cursor: default;
+
+                &:hover {
+                  width: 75px;
+                  height: 75px;
+                }
+              }
+
+            }
+          }
+        }
+
+        strong {
+          text-align: center;
+          font-size: 13px;
+          color: white;
+          margin: 12px 0 4px;
+          cursor: pointer;
+        }
+
+        p {
+          text-align: center;
+          line-height: 20px;
+          font-size: 13px;
+          color: white;
+          opacity: 0.6;
+          font-weight: 500;
+          cursor: default;
+        }
+      }
+    }
+  }
 }
